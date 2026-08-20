@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LibroBot Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">📚 LibroBot</div>
+
+        <div class="nav-right">
+
+            <span id="welcomeUser">Welcome</span>
+
+            <button onclick="logout()" class="logout-btn">
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main class="dashboard">
+
+        <section class="hero">
+
+            <div>
+
+                <h1>AI Library Assistant 🤖</h1>
+
+                <p>
+                    Ask LibroBot anything about books and the library.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>📚</span>
+                <h3>1,250</h3>
+                <p>Total Books</p>
+            </div>
+
+            <div class="stat-card">
+                <span>📖</span>
+                <h3>850</h3>
+                <p>Available Books</p>
+            </div>
+
+            <div class="stat-card">
+                <span>👥</span>
+                <h3>320</h3>
+                <p>Members</p>
+            </div>
+
+            <div class="stat-card">
+                <span>🔄</span>
+                <h3>120</h3>
+                <p>Books Issued</p>
+            </div>
+
+        </section>
+
+
+        <section class="content-grid">
+
+            <!-- Book search -->
+
+            <div class="books-section">
+
+                <div class="section-title">
+
+                    <h2>📚 Popular Books</h2>
+
+                    <input
+                        type="text"
+                        id="bookSearch"
+                        placeholder="Search books..."
+                        onkeyup="searchBooks()"
+                    >
+
+                </div>
+
+                <div id="bookList" class="book-list"></div>
+
+            </div>
+
+
+            <!-- Chatbot -->
+
+            <div class="chat-container">
+
+                <div class="chat-header">
+
+                    <div>
+                        <strong>🤖 LibroBot AI</strong>
+                        <small>● Online</small>
+                    </div>
+
+                </div>
+
+
+                <div id="chatMessages" class="chat-messages">
+
+                    <div class="bot-message">
+                        👋 Hello! I'm LibroBot.
+                        <br><br>
+                        I can help you find books, check availability,
+                        and answer library questions.
+                    </div>
+
+                </div>
+
+
+                <div class="quick-buttons">
+
+                    <button onclick="quickQuestion('Find Python books')">
+                        Python Books
+                    </button>
+
+                    <button onclick="quickQuestion('Which books are available?')">
+                        Available Books
+                    </button>
+
+                    <button onclick="quickQuestion('What are library timings?')">
+                        Library Timings
+                    </button>
+
+                </div>
+
+
+                <div class="chat-input">
+
+                    <input
+                        type="text"
+                        id="userInput"
+                        placeholder="Ask LibroBot..."
+                        onkeypress="handleEnter(event)"
+                    >
+
+                    <button onclick="startVoice()" title="Voice">
+                        🎤
+                    </button>
+
+                    <button onclick="sendMessage()" title="Send">
+                        ➤
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

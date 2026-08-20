@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibroBot - AI Library Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+    <div class="login-container">
+
+        <div class="login-left">
+
+    <div class="logo">
+        📚 LibroBot
+    </div>
+
+    <div class="login-content">
+
+        <span class="welcome-badge">
+            ✨ AI POWERED LIBRARY
+        </span>
+
+        <h1>
+            Your Smart
+            <span>Library Assistant</span>
+        </h1>
+
+        <p>
+            Discover books, explore knowledge and get instant
+            answers with your intelligent library assistant.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <span>🤖</span>
+                <div>
+                    <strong>AI Assistant</strong>
+                    <small>Smart answers</small>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <span>📚</span>
+                <div>
+                    <strong>Smart Search</strong>
+                    <small>Find books instantly</small>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <span>🎤</span>
+                <div>
+                    <strong>Voice Search</strong>
+                    <small>Ask by voice</small>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <span>📷</span>
+                <div>
+                    <strong>Face Login</strong>
+                    <small>Secure access</small>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMAGE FRAME -->
+
+    <div class="library-frame">
+
+        <div class="image-glow"></div>
+
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7E1yrWbDCAnbQmVPzFXFG8wpx-oJ1HI3Iy3AXfYSNiQ&s=10.jpg"
+            alt="Modern library"
+        >
+
+        <div class="image-label">
+            <span>📖</span>
+
+            <div>
+                <strong>Explore Knowledge</strong>
+                <small>1250+ books available</small>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="login-card">
+
+            <h2>Welcome Back 👋</h2>
+            <p class="subtitle">Login to access LibroBot</p>
+
+            <form id="loginForm">
+
+                <label>Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <label>Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit" class="primary-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <div class="or">
+                <span>OR</span>
+            </div>
+
+            <button class="face-btn" onclick="startFaceVerification()">
+                📷 Login with Face
+            </button>
+
+            <p class="demo">
+                Demo login: <b>admin</b> / <b>1234</b>
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Face verification popup -->
+
+    <div id="faceModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeFaceModal()">×</span>
+
+            <h2>Face Verification</h2>
+
+            <p>Position your face inside the camera.</p>
+
+            <video id="camera" autoplay></video>
+
+            <div id="faceStatus">
+                Camera starting...
+            </div>
+
+            <button class="primary-btn" onclick="verifyFace()">
+                Verify Face
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
